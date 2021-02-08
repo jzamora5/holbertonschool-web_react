@@ -8,12 +8,25 @@ interface Teacher {
   /* eslint-enable @typescript-eslint/no-explicit-any*/
 }
 
-const teacher3: Teacher = {
+// const teacher3: Teacher = {
+//   firstName: "John",
+//   fullTimeEmployee: false,
+//   lastName: "Doe",
+//   location: "London",
+//   contract: false,
+// };
+
+// console.log(teacher3);
+
+interface Directors extends Teacher {
+  numberOfReports: number;
+}
+
+const director1: Directors = {
   firstName: "John",
-  fullTimeEmployee: false,
   lastName: "Doe",
   location: "London",
-  contract: false,
+  fullTimeEmployee: true,
+  numberOfReports: 17,
 };
-
-console.log(teacher3);
+console.log(director1);
