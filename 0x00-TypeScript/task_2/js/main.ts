@@ -45,3 +45,22 @@ function createEmployee(salary: number | string): Teacher | Director {
 // console.log(createEmployee(200));
 // console.log(createEmployee(1000));
 // console.log(createEmployee("$500"));
+
+function isDirector(employee: Teacher | Director): employee is Director {
+  return (employee as Director).workDirectorTasks !== undefined;
+}
+
+function executeWork(employee: Teacher | Director): void {
+  let msg;
+
+  if (isDirector(employee)) {
+    msg = employee.workDirectorTasks();
+  } else {
+    msg = employee.workTeacherTasks();
+  }
+
+  console.log(msg);
+}
+
+// executeWork(createEmployee(200));
+// executeWork(createEmployee(1000));
