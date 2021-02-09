@@ -38,7 +38,7 @@ interface printTeacherFunction {
 }
 
 /* eslint-enable @typescript-eslint/class-name-casing */
-const printTeacher: printTeacherFunction = function (
+export const printTeacher: printTeacherFunction = function (
   firstName: string,
   lastName: string
 ): string {
