@@ -11,8 +11,14 @@ interface MinorCredits {
 function sumMajorCredits(
   subject1: MajorCredits,
   subject2: MajorCredits
-): number {
-  return subject1.credit + subject2.credit;
+): MajorCredits {
+  const sum = subject1.credit + subject2.credit;
+  const obj: MajorCredits = {
+    credit: sum,
+    _majorCreditsBrand: "",
+  };
+
+  return obj;
 }
 
 function sumMinorCredits(
