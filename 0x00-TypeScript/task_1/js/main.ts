@@ -66,7 +66,6 @@ class StudentClass implements StudentClassInterface {
   }
 
   workOnHomework(): string {
-    console.log("Currently working");
     return "Currently working";
   }
 
