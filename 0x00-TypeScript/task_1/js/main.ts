@@ -42,13 +42,13 @@ const printTeacher: printTeacherFunction = function (
   firstName: string,
   lastName: string
 ): string {
-  return `${firstName.charAt(0)} ${lastName}`;
+  return `${firstName.charAt(0)}. ${lastName}`;
 };
 
 // console.log(printTeacher("John", "Doe"));
 
 interface StudentConstructor {
-  new (firstName: string, lastName: string): StudentClassInterface;
+  new(firstName: string, lastName: string): StudentClassInterface;
 }
 
 interface StudentClassInterface {
