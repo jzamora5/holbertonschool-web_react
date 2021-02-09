@@ -32,15 +32,15 @@ interface Directors extends Teacher {
 // };
 // console.log(director1);
 
-function printTeacher(firstName: string, lastName: string): string {
-  return `${firstName[0]}. ${lastName}`;
-}
-
 /* eslint-disable @typescript-eslint/class-name-casing */
 interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
+
 /* eslint-enable @typescript-eslint/class-name-casing */
+const printTeacher = function (firstName: string, lastName: string): string {
+  return `${firstName[0]}. ${lastName}`;
+};
 
 // let x: printTeacherFunction = printTeacher;
 
@@ -51,8 +51,6 @@ interface StudentConstructor {
 }
 
 interface StudentClassInterface {
-  firstName: string;
-  lastName: string;
   workOnHomework(): string;
   displayName(): string;
 }
