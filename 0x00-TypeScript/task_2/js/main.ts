@@ -53,7 +53,7 @@ export function isDirector(employee: TeacherInterface | DirectorInterface): empl
   return (employee as Director).workDirectorTasks !== undefined;
 }
 
-export function executeWork(employee: TeacherInterface | DirectorInterface): string {
+export function executeWork(employee: DirectorInterface | TeacherInterface): string {
   let msg;
 
   if (isDirector(employee)) {
