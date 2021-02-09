@@ -1,11 +1,11 @@
 interface MajorCredits {
   credit: number;
-  _majorCreditsBrand: string;
+  _majorCreditsBrand: "Major";
 }
 
 interface MinorCredits {
   credit: number;
-  _minorCreditsBrand: string;
+  _minorCreditsBrand: "Minor";
 }
 
 function sumMajorCredits(
@@ -15,7 +15,7 @@ function sumMajorCredits(
   const sum = subject1.credit + subject2.credit;
   const obj: MajorCredits = {
     credit: sum,
-    _majorCreditsBrand: "",
+    _majorCreditsBrand: "Major",
   };
 
   return obj;
