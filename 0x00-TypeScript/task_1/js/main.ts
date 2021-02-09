@@ -48,7 +48,7 @@ const printTeacher: printTeacherFunction = function (
 // console.log(printTeacher("John", "Doe"));
 
 interface StudentConstructor {
-  new(firstName: string, lastName: string): StudentClassInterface;
+  new (firstName: string, lastName: string): StudentClassInterface;
 }
 
 interface StudentClassInterface {
@@ -66,6 +66,7 @@ class StudentClass implements StudentClassInterface {
   }
 
   workOnHomework(): string {
+    console.log("Currently working");
     return "Currently working";
   }
 
