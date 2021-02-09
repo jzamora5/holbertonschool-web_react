@@ -53,7 +53,9 @@ export function isDirector(employee: Teacher | Director): employee is Director {
   return (employee as Director).workDirectorTasks !== undefined;
 }
 
-export function executeWork(employee: Teacher | Director): void {
+export function executeWork(
+  employee: DirectorInterface | TeacherInterface
+): void {
   let msg;
 
   if (isDirector(employee)) {
