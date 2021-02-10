@@ -1,6 +1,6 @@
 const $ = require("jquery");
 const _ = require("lodash");
-import css from "../css/main.css";
+import "../css/main.css";
 
 let count = 0;
 
