@@ -10,8 +10,8 @@ const Notifications = () => {
         style={{
           background: "transparent",
           border: "none",
-          width: "100%",
-          textAlign: "right",
+          position: "absolute",
+          right: 20,
         }}
         aria-label="close"
       >
