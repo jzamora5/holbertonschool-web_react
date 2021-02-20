@@ -2,7 +2,12 @@
   --main-color: #e01d3f;
 }
 
+.menuItem {
+  text-align: right;
+}
+
 .Notifications {
+  float: right;
   border: 3px dashed var(--main-color);
   padding: 10px;
   margin-bottom: 20px;
