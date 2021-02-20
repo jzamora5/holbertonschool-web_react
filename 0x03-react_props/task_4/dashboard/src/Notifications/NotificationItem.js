@@ -17,10 +17,12 @@ function NotificationItem({ type, value, html }) {
 
 NotificationItem.defaultProps = {
   type: "default",
+  value: "",
+  html: {},
 };
 
 NotificationItem.propTypes = {
-  type: PropTypes.string.isRequired,
+  type: PropTypes.string,
   value: PropTypes.string,
   html: PropTypes.shape({
     __html: PropTypes.string,
