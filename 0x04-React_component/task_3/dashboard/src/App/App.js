@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import Notifications from "../Notifications/Notifications";
 import Header from "../Header/Header";
+import BodySection from "../BodySection/BodySection";
+import BodySectionWithMarginBottom from "../BodySection/BodySectionWithMarginBottom";
 import Login from "../Login/Login";
 import CourseList from "../CourseList/CourseList";
 import Footer from "../Footer/Footer";
-import BodySection from "../BodySection/BodySection";
 import PropTypes from "prop-types";
 import { getLatestNotification } from "../utils/utils";
 import "./App.css";
@@ -51,11 +52,20 @@ class App extends Component {
           <Header />
         </div>
         <div className="App-body">
-          {!isLoggedIn ? <Login /> : <CourseList listCourses={listCourses} />}
+          {!isLoggedIn ? (
+            <BodySectionWithMarginBottom title="Log in to continue">
+              <Login />
+            </BodySectionWithMarginBottom>
+          ) : (
+            <BodySectionWithMarginBottom title="Course list">
+              <CourseList listCourses={listCourses} />
+            </BodySectionWithMarginBottom>
+          )}
         </div>
-        <BodySection title="test">
-          <p>test</p>
+        <BodySection title="News from the School">
+          <p>Some Random Text</p>
         </BodySection>
+
         <div className="App-footer">
           <Footer />
         </div>
