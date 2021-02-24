@@ -40,18 +40,21 @@ describe("<App />", () => {
   });
 
   it("when the keys control and h are pressed the logOut function, passed as a prop, is called and the alert function is called with the string Logging you out", () => {
-    let events = {};
+    const events = {};
+    const logout = jest.fn();
+
     document.addEventListener = jest.fn((event, cb) => {
       events[event] = cb;
     });
 
     window.alert = jest.fn();
 
-    const wrapper = mount(<App logOut={() => {}} />);
+    const wrapper = mount(<App logOut={logout} />);
 
     events.keydown({ key: "h", ctrlKey: true });
 
     expect(window.alert).toHaveBeenCalledWith("Logging you out");
+    expect(logout).toHaveBeenCalled();
 
     jest.restoreAllMocks();
   });
