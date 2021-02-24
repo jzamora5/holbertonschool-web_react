@@ -49,7 +49,7 @@ describe("<App />", () => {
 
     window.alert = jest.fn();
 
-    const wrapper = mount(<App logOut={logout} />);
+    shallow(<App logOut={logout} />);
 
     events.keydown({ key: "h", ctrlKey: true });
 
