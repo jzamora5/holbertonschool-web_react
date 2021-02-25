@@ -5,7 +5,7 @@ import Login from "./Login";
 describe("<Login />", () => {
   it("Login renders without crashing", () => {
     const wrapper = shallow(<Login />);
-    expect(wrapper.exists());
+    expect(wrapper.exists()).toEqual(true);
   });
   it("Verify that the components render 2 input", () => {
     const wrapper = shallow(<Login />);

@@ -5,7 +5,7 @@ import Header from "./Header";
 describe("<Header />", () => {
   it("Header renders without crashing", () => {
     const wrapper = shallow(<Header />);
-    expect(wrapper.exists());
+    expect(wrapper.exists()).toEqual(true);
   });
   it("Verify that the components render img", () => {
     const wrapper = shallow(<Header />);

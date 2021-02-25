@@ -5,6 +5,6 @@ import Footer from "./Footer";
 describe("<Footer />", () => {
   it("Footer renders without crashing", () => {
     const wrapper = shallow(<Footer />);
-    expect(wrapper.exists());
+    expect(wrapper.exists()).toEqual(true);
   });
 });
