@@ -5,7 +5,7 @@ import App from "./App";
 describe("<App />", () => {
   it("App renders without crashing", () => {
     const wrapper = shallow(<App />);
-    expect(wrapper.exists());
+    expect(wrapper.exists()).toEqual(true);
   });
   it("should contain the Notifications component", () => {
     const wrapper = shallow(<App />);
