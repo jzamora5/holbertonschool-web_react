@@ -4,7 +4,7 @@ import Notifications from "./Notifications";
 describe("<Notifications />", () => {
   it("Notifications renders without crashing", () => {
     const wrapper = shallow(<Notifications />);
-    expect(wrapper.exists());
+    expect(wrapper.exists()).toEqual(true);
   });
   it("Notifications renders three list items", () => {
     const wrapper = shallow(<Notifications />);
