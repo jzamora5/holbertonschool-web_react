@@ -1,7 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function NotificationItem({ type, value, html, markAsRead, id }) {
+const NotificationItem = React.memo(function NotificationItem({
+  type,
+  value,
+  html,
+  markAsRead,
+  id,
+}) {
   let listItem;
 
   if (value) {
@@ -21,7 +27,7 @@ function NotificationItem({ type, value, html, markAsRead, id }) {
   }
 
   return listItem;
-}
+});
 
 NotificationItem.defaultProps = {
   type: "default",
