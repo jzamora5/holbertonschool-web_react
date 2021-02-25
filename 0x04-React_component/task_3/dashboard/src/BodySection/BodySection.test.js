@@ -5,7 +5,7 @@ import BodySection from "./BodySection";
 describe("<BodySection />", () => {
   it("BodySection renders without crashing", () => {
     const wrapper = shallow(<BodySection />);
-    expect(wrapper.exists());
+    expect(wrapper.exists()).toEqual(true);
   });
 
   it("BodySection renders without crashing", () => {

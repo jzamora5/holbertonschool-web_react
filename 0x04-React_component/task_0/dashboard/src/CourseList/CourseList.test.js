@@ -6,7 +6,7 @@ describe("<CourseList />", () => {
   let listCourses;
   it("CourseList renders without crashing", () => {
     const wrapper = shallow(<CourseList />);
-    expect(wrapper.exists());
+    expect(wrapper.exists()).toEqual(true);
   });
 
   describe("CourseList with list of courses", () => {

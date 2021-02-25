@@ -5,7 +5,7 @@ import BodySectionWithMarginBottom from "./BodySectionWithMarginBottom";
 describe("<BodySectionWithMarginBottom />", () => {
   it("BodySectionWithMarginBottom renders without crashing", () => {
     const wrapper = shallow(<BodySectionWithMarginBottom />);
-    expect(wrapper.exists());
+    expect(wrapper.exists()).toEqual(true);
   });
 
   it("Shallowing the component should render correctly a BodySection component and that the props are passed correctly to the child component", () => {

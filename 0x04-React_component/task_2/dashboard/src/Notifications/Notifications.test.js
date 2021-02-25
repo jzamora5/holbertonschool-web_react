@@ -9,7 +9,7 @@ describe("<Notifications />", () => {
 
   it("Notifications renders without crashing", () => {
     const wrapper = shallow(<Notifications />);
-    expect(wrapper.exists());
+    expect(wrapper.exists()).toEqual(true);
   });
 
   it("menu item is being displayed when displayDrawer is false", () => {
