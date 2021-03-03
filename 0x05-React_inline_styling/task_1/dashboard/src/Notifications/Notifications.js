@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import NotificationItemShape from "./NotificationItemShape";
 import closeIcon from "../assets/close-icon.png";
 import { StyleSheet, css } from "aphrodite";
-import "./Notifications.css";
 
 class Notifications extends Component {
   constructor(props) {
