@@ -66,7 +66,7 @@ class App extends Component {
           <p>Some Random Text</p>
         </BodySection>
 
-        <div className="App-footer">
+        <div className={css(styles.footer)}>
           <Footer />
         </div>
       </>
@@ -96,6 +96,16 @@ const styles = StyleSheet.create({
   appBody: {
     display: "flex",
     justifyContent: "center",
+  },
+
+  footer: {
+    borderTop: `3px solid ${cssVars.mainColor}`,
+    width: "100%",
+    display: "flex",
+    justifyContent: "center",
+    position: "fixed",
+    bottom: 0,
+    fontStyle: "italic",
   },
 });
 
