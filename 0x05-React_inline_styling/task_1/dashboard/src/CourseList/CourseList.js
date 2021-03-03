@@ -7,7 +7,7 @@ import "./CourseList.css";
 
 function CourseList({ listCourses }) {
   return (
-    <table id="CourseList" className={css(styles.courseList)}>
+    <table id="CourseList" className={css(styles.list)}>
       <thead>
         <CourseListRow textFirstCell="Available courses" isHeader={true} />
         <CourseListRow
@@ -50,7 +50,7 @@ const cssVars = {
 };
 
 const styles = StyleSheet.create({
-  courseList: {
+  list: {
     border: `1px solid ${cssVars.borderTableColor}`,
     borderCollapse: "collapse",
     width: "95%",
