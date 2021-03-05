@@ -162,16 +162,20 @@ const styles = StyleSheet.create({
     animationDuration: "0.8s",
     animationIterationCount: 1,
     animationFillMode: "forwards",
+    ":hover": {
+      border: `3px dashed deepSkyBlue`,
+      // animationFillMode: "forwards",
+    },
     [screenSize.small]: {
       float: "none",
       border: "none",
       listStyle: "none",
       padding: 0,
       fontSize: "20px",
-    },
-    ":hover": {
-      border: `3px dashed deepSkyBlue`,
-      // animationFillMode: "forwards",
+      ":hover": {
+        border: "none",
+        // animationFillMode: "forwards",
+      },
     },
   },
 
