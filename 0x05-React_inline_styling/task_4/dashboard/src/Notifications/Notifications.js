@@ -124,7 +124,7 @@ const translateYKeyframes = {
 
 const borderKeyframes = {
   "0%": {
-    border: `3px dashed cyan`,
+    border: `3px dashed deepSkyBlue`,
   },
 
   "100%": {
@@ -168,6 +168,10 @@ const styles = StyleSheet.create({
       listStyle: "none",
       padding: 0,
       fontSize: "20px",
+    },
+    ":hover": {
+      border: `3px dashed deepSkyBlue`,
+      // animationFillMode: "forwards",
     },
   },
 
