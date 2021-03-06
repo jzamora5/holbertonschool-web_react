@@ -3,9 +3,11 @@ import React from "react";
 export const user = {
   email: "",
   password: "",
-  isLoggedIn: "",
+  isLoggedIn: false,
 };
 
 export const logOut = () => {};
 
-export const AppContext = React.createContext({ user, logOut });
+const AppContext = React.createContext({ user, logOut });
+
+export default AppContext;

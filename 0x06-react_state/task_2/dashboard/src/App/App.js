@@ -10,6 +10,7 @@ import PropTypes from "prop-types";
 import { getLatestNotification } from "../utils/utils";
 import { StyleSheet, css } from "aphrodite";
 import { user, logOut } from "./AppContext";
+import AppContext from "./AppContext";
 
 const listCourses = [
   { id: 1, name: "ES6", credit: 60 },
@@ -33,13 +34,13 @@ class App extends Component {
     this.handleHideDrawer = this.handleHideDrawer.bind(this);
     this.logIn = this.logIn.bind(this);
     this.logOut = this.logOut.bind(this);
-    this.state = { displayDrawer: false, user, logOut };
+    this.state = { displayDrawer: false, user, logOut: this.logOut };
   }
 
   handleKeyCombination(e) {
     if (e.key === "h" && e.ctrlKey) {
       alert("Logging you out");
-      this.props.logOut();
+      this.state.logOut();
     }
   }
 
@@ -75,13 +76,14 @@ class App extends Component {
 
   render() {
     const {
+      user,
       user: { isLoggedIn },
       logOut,
       displayDrawer,
     } = this.state;
 
     return (
-      <>
+      <AppContext.Provider value={{ user, logOut }}>
         <Notifications
           listNotifications={listNotifications}
           displayDrawer={displayDrawer}
@@ -122,7 +124,7 @@ class App extends Component {
             <Footer />
           </div>
         </div>
-      </>
+      </AppContext.Provider>
     );
   }
 }
