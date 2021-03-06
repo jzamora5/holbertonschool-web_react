@@ -82,8 +82,10 @@ class App extends Component {
       displayDrawer,
     } = this.state;
 
+    const value = { user, logOut };
+
     return (
-      <AppContext.Provider value={{ user, logOut }}>
+      <AppContext.Provider value={value}>
         <Notifications
           listNotifications={listNotifications}
           displayDrawer={displayDrawer}
