@@ -121,6 +121,10 @@ const styles = StyleSheet.create({
       listStyle: "none",
       padding: 0,
       fontSize: "20px",
+      position: "absolute",
+      background: "white",
+      height: "110vh",
+      width: "100vw",
     },
   },
 
