@@ -176,6 +176,10 @@ const styles = StyleSheet.create({
         border: "none",
         // animationFillMode: "forwards",
       },
+      position: "absolute",
+      background: "white",
+      height: "110vh",
+      width: "100vw",
     },
   },
 
