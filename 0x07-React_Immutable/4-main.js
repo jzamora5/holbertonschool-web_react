@@ -1,4 +1,3 @@
-import { toJS } from 'immutable';
 import { map, map2 } from './4-mutations';
 
 console.log(map);
