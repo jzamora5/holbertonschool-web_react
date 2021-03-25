@@ -69,7 +69,7 @@ describe("courseReducer tests", function () {
       {
         id: 2,
         name: "Webpack",
-        isSelected: true,
+        isSelected: false,
         credit: 20,
       },
       {
