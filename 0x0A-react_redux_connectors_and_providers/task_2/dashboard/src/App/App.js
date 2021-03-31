@@ -33,7 +33,7 @@ export const listNotificationsInitialState = [
 
 document.body.style.margin = 0;
 
-class App extends Component {
+export class App extends Component {
   constructor(props) {
     super(props);
     this.handleKeyCombination = this.handleKeyCombination.bind(this);
@@ -79,10 +79,8 @@ class App extends Component {
       logout,
     } = this.props;
 
-    const value = { user, logout };
-
     return (
-      <AppContext.Provider value={value}>
+      <>
         <Notifications
           listNotifications={listNotifications}
           displayDrawer={displayDrawer}
@@ -124,7 +122,7 @@ class App extends Component {
             <Footer />
           </div>
         </div>
-      </AppContext.Provider>
+      </>
     );
   }
 }

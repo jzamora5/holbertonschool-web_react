@@ -6,7 +6,7 @@ import { StyleSheet, css } from "aphrodite";
 import AppContext from "../App/AppContext";
 import holberton_logo from "../assets/holberton_logo.jpg";
 
-class Header extends Component {
+export class Header extends Component {
   constructor(props) {
     super(props);
   }

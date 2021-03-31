@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { getFullYear, getFooterCopy } from "../utils/utils";
 import PropTypes from "prop-types";
 
-function Footer({ user }) {
+export function Footer({ user }) {
   return (
     <div className="footer">
       <p>
@@ -28,5 +28,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-// export default Footer;
 export default connect(mapStateToProps, null)(Footer);
