@@ -90,13 +90,9 @@ class App extends Component {
   }
 
   render() {
-    const {
-      user,
-      user: { isLoggedIn },
-      logOut,
-      displayDrawer,
-      listNotifications,
-    } = this.state;
+    const { user, logOut, displayDrawer, listNotifications } = this.state;
+
+    const { isLoggedIn } = this.props;
 
     const value = { user, logOut };
 
