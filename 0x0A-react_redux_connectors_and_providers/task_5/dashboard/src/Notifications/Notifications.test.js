@@ -295,5 +295,18 @@ describe("<Notifications />", () => {
 
       jest.restoreAllMocks();
     });
+
+    it("verify that the function fetchNotifications is called when the component is mounted", () => {
+      const fetchNotifications = jest.fn();
+      const handleHideDrawer = jest.fn();
+
+      const wrapper = shallow(
+        <Notifications fetchNotifications={fetchNotifications} />
+      );
+
+      expect(fetchNotifications).toHaveBeenCalled();
+
+      jest.restoreAllMocks();
+    });
   });
 });
