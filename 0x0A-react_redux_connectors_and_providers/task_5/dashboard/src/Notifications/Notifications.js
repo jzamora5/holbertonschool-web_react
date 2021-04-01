@@ -220,16 +220,6 @@ const styles = StyleSheet.create({
 });
 
 const mapStateToProps = (state) => {
-  const messages = state.notifications.get("messages");
-  if (messages) {
-    console.log(messages.toJS());
-    // messages.valueSeq().forEach((value) => {
-    //   console.log(value.get("guid"));
-    // });
-
-    // console.log(messages.valueSeq());
-  }
-
   return {
     listNotifications: state.notifications.get("messages"),
   };
