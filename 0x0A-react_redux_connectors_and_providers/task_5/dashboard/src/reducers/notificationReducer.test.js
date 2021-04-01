@@ -12,7 +12,7 @@ import {
 
 import notificationsNormalizer from "../schema/notifications";
 
-describe("courseReducer tests", function () {
+describe("notificationReducer tests", function () {
   it("Tests that the default state returns an initial state", function () {
     const state = notificationReducer(undefined, {});
 
@@ -62,6 +62,7 @@ describe("courseReducer tests", function () {
 
     const expectedData = {
       filter: "DEFAULT",
+      loading: false,
       ...normalizedData,
     };
     expectedData.notifications[1].isRead = false;

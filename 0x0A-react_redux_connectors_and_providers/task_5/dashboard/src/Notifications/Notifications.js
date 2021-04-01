@@ -68,18 +68,16 @@ export class Notifications extends Component {
               )}
 
               {listNotifications &&
-                listNotifications
-                  .valueSeq()
-                  .map((notification) => (
-                    <NotificationItem
-                      key={notification.get("guid")}
-                      id={notification.get("guid")}
-                      type={notification.get("type")}
-                      value={notification.get("value")}
-                      html={notification.get("html")}
-                      markAsRead={markNotificationAsRead}
-                    />
-                  ))}
+                Object.values(listNotifications).map((notification) => (
+                  <NotificationItem
+                    key={notification.guid}
+                    id={notification.guid}
+                    type={notification.type}
+                    value={notification.value}
+                    html={notification.html}
+                    markAsRead={markNotificationAsRead}
+                  />
+                ))}
             </ul>
           </div>
         )}
@@ -90,7 +88,7 @@ export class Notifications extends Component {
 
 Notifications.defaultProps = {
   displayDrawer: false,
-  listNotifications: {},
+  listNotifications: null,
   handleDisplayDrawer: () => {},
   handleHideDrawer: () => {},
   markNotificationAsRead: () => {},
