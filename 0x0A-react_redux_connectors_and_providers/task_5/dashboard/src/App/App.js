@@ -161,7 +161,7 @@ const styles = StyleSheet.create({
     display: "flex",
     justifyContent: "center",
     textAlign: "center",
-    position: "fixed",
+    position: "static",
     paddingBottom: "10px",
     bottom: 0,
     fontStyle: "italic",
