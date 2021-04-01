@@ -14,8 +14,6 @@ describe("uiReducer tests", function () {
 
     const state = reducer(undefined, { type: "RANDOM" });
 
-    console.log(state);
-
     for (const st in expectedState) {
       expect(state[st]).toBeTruthy();
       expect(typeof expectedState[st]).toEqual(typeof state[st]);
