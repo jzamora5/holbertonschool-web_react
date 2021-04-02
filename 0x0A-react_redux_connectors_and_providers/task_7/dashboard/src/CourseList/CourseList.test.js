@@ -101,5 +101,41 @@ describe("<CourseList />", () => {
       expect(item.at(2).prop("textSecondCell")).toEqual(null);
       expect(item.at(2).prop("isHeader")).toEqual(false);
     });
+
+    it("verify that the function fetchCourses is called when the component is mounted", () => {
+      const fetchCourses = jest.fn();
+
+      const wrapper = shallow(<CourseList fetchCourses={fetchCourses} />);
+
+      expect(fetchCourses).toHaveBeenCalled();
+
+      jest.restoreAllMocks();
+    });
+
+    it("verify that the two actions are correctly dispatched when the onChangeRow function is called", () => {
+      const fetchCourses = jest.fn();
+      const selectCourse = jest.fn();
+      const unSelectCourse = jest.fn();
+
+      const wrapper = shallow(
+        <CourseList
+          fetchCourses={fetchCourses}
+          selectCourse={selectCourse}
+          unSelectCourse={unSelectCourse}
+        />
+      );
+
+      const instance = wrapper.instance();
+
+      instance.onChangeRow("1", true);
+
+      expect(selectCourse).toHaveBeenCalled();
+
+      instance.onChangeRow("1", false);
+
+      expect(unSelectCourse).toHaveBeenCalled();
+
+      jest.restoreAllMocks();
+    });
   });
 });
