@@ -5,7 +5,7 @@ import { getLatestNotification } from "../utils/utils";
 import { StyleSheetTestUtils } from "aphrodite";
 import notificationsNormalizer from "../schema/notifications";
 import { Map, fromJS } from "immutable";
-import { getUnreadNotifications } from "../selectors/notificationSelector";
+import { getUnreadNotificationsByType } from "../selectors/notificationSelector";
 
 const NOTIFICATIONS = [
   {
@@ -141,7 +141,7 @@ describe("<Notifications />", () => {
     });
 
     it("Notifications renders Notification Items and items have correct html", () => {
-      const messages = getUnreadNotifications(listNotifications);
+      const messages = getUnreadNotificationsByType(listNotifications);
 
       const wrapper = mount(
         <Notifications displayDrawer listNotifications={messages} />

@@ -3,7 +3,7 @@ import { Map, fromJS } from "immutable";
 import {
   filterTypeSelected,
   getNotifications,
-  getUnreadNotifications,
+  getUnreadNotificationsByType,
 } from "./notificationSelector";
 
 import notificationReducer, {
@@ -59,7 +59,7 @@ describe("Selectors tests", function () {
       notificationsNormalizer(initialState.notifications).notifications
     );
   });
-  it("test that getUnreadNotifications return a list of the message entities within the reducer", function () {
+  it("test that getUnreadNotificationsByType return a list of the message entities within the reducer", function () {
     const state = {
       notifications: fromJS({
         messages: {
@@ -94,7 +94,7 @@ describe("Selectors tests", function () {
       },
     ];
 
-    const selected = getUnreadNotifications(state);
+    const selected = getUnreadNotificationsByType(state);
 
     expect(selected.toJS()).toEqual(expectedResult);
   });

@@ -14,7 +14,6 @@ export const getUnreadNotificationsByType = createSelector(
   (notifications) => {
     const messages = notifications.get("messages");
     const filter = notifications.get("filter");
-    console.log(filter);
 
     if (messages) {
       let filtered;
