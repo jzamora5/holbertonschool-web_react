@@ -70,6 +70,7 @@ export class Notifications extends Component {
             <button
               type="button"
               className={css(styles.filterButton)}
+              id="buttonFilterUrgent"
               onClick={() => {
                 setNotificationFilter("URGENT");
               }}
@@ -79,6 +80,7 @@ export class Notifications extends Component {
             <button
               type="button"
               className={css(styles.filterButton)}
+              id="buttonFilterDefault"
               onClick={() => {
                 setNotificationFilter("DEFAULT");
               }}
