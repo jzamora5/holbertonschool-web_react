@@ -1,6 +1,6 @@
 import { shallow } from "enzyme";
 import React from "react";
-import CourseList from "./CourseList";
+import { CourseList } from "./CourseList";
 import { StyleSheetTestUtils } from "aphrodite";
 
 describe("<CourseList />", () => {
@@ -61,7 +61,7 @@ describe("<CourseList />", () => {
     });
 
     it("it renders the 3 rows without listCourses  without listCourses", () => {
-      const wrapper = shallow(<CourseList />);
+      const wrapper = shallow(<CourseList fetchCourses={() => {}} />);
       expect(wrapper.exists());
       wrapper.update();
       const item = wrapper.find("CourseListRow");
@@ -82,7 +82,7 @@ describe("<CourseList />", () => {
     });
 
     it("it renders the 3 rows with listCourses empty", () => {
-      const wrapper = shallow(<CourseList listCourses={listCourses} />);
+      const wrapper = shallow(<CourseList fetchCourses={() => {}} />);
       expect(wrapper.exists());
       wrapper.update();
       const item = wrapper.find("CourseListRow");

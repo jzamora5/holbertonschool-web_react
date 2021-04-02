@@ -1,4 +1,4 @@
-export const getAllCourses = (state) => {
+export const getListCourses = (state) => {
   const courses = state.courses;
 
   if (courses) {

@@ -1,5 +1,5 @@
 import { Map, fromJS } from "immutable";
-import { getAllCourses } from "./courseSelector";
+import { getListCourses } from "./courseSelector";
 
 describe("Course selectors tests", function () {
   it("verify that the selector is working correctly", function () {
@@ -47,7 +47,7 @@ describe("Course selectors tests", function () {
       },
     ];
 
-    const selected = getAllCourses(state);
+    const selected = getListCourses(state);
 
     expect(selected.toJS()).toEqual(expectedResult);
   });
