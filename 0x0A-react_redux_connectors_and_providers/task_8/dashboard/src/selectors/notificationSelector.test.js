@@ -100,7 +100,7 @@ describe("Selectors tests", function () {
     expect(selected.toJS()).toEqual(expectedResult);
   });
 
-  it(" verify that the selector returns unread urgent notifications when the filter is set", function () {
+  it("verify that the selector returns unread urgent notifications when the filter is set", function () {
     const state = {
       notifications: fromJS({
         filter: "URGENT",
